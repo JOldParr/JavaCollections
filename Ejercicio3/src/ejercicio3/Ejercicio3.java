@@ -5,6 +5,9 @@
  */
 package ejercicio3;
 
+import Entidad.Alumno;
+import ServiciosAlumno.Servicios;
+
 /**
  *
  * @author Julian
@@ -16,6 +19,9 @@ public class Ejercicio3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Servicios s = new Servicios();
+        s.bucleAlumno();
+        s.buscarAlumno();
     }
     
 }

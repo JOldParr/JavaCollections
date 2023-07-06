@@ -13,28 +13,36 @@ import java.util.ArrayList;
  */
 public class Alumno {
     
-    private ArrayList<String> alumno;
-    private ArrayList<Double> notas;
+    private String nombre;
+    private ArrayList<Integer> notas;
 
     public Alumno() {
-        this.alumno = new ArrayList();
-        this.alumno = new ArrayList(3);
+    }
+        
+    public Alumno(String nombre, ArrayList<Integer> notas) {
+        this.nombre = nombre;
+        this.notas = new ArrayList();
     }
 
-    public ArrayList<String> getAlumno() {
-        return alumno;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setAlumno(ArrayList<String> alumno) {
-        this.alumno = alumno;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public ArrayList<Double> getNotas() {
+    public ArrayList<Integer> getNotas() {
         return notas;
     }
 
-    public void setNotas(ArrayList<Double> notas) {
+    public void setNotas(ArrayList<Integer> notas) {
         this.notas = notas;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", notas=" + notas + '}';
     }
 
    
