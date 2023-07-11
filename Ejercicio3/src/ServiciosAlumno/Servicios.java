@@ -66,21 +66,23 @@ public class Servicios {
     }
 
     public void buscarAlumno() {
+        
         System.out.println("Indique el nombre del alumno que quiere buscar");
         String alumnoBuscar = leerString.nextLine();
         int cont = 0;
         int index = 0;
+        boolean SiExiste = false;
         Alumno AlumnoBuscado = new Alumno();
         for (Alumno aux : ListaAlumnos) {
             cont++;
             if (aux.getNombre().equalsIgnoreCase(alumnoBuscar)) {
                 index = cont;
                 AlumnoBuscado = aux;
-            } else {
-                index = 0;
+                SiExiste=true;
             }
+            
         }
-        if (index == 0) {
+        if (SiExiste == false) {
             System.out.println("No se encontro el pelao, intentelo otra vez");
             buscarAlumno();
         } else {
